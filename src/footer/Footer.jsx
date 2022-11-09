@@ -74,7 +74,7 @@ const Footer = () => {
                      <FaPinterestP/>
                      <FaFacebookF/>
                      <FaInstagram/>
-                     <FaYoutube/>
+                     <a href="https://www.youtube.com/channel/UCrgUXfV7IIFllEQMbzd9J3A" target='_blank' rel='noreferrer'><FaYoutube/></a>
                 </div>
         </div>
         <div className='accortn'>
