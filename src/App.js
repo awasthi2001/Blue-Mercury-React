@@ -3,7 +3,7 @@
 import './App.css';
 import {AllRoutes} from "./pages/Routes/AllRoutes";
 import Navbar from './navbar/Navbar';
-import Footer from "./footer/Footer"
+ import Footer from "./footer/Footer"
 
 
 function App() {

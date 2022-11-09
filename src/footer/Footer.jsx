@@ -20,7 +20,7 @@ const Footer = () => {
                      <FaPinterestP size='25px'/>
                      <FaFacebookF size='25px'/>
                      <FaInstagram size='25px'/>
-                     <FaYoutube size='25px'/>
+                     <a href="https://www.youtube.com/channel/UCrgUXfV7IIFllEQMbzd9J3A" target="_blank" rel="noopener noreferrer"><FaYoutube size='25px'/></a>
                 </div>
                 <p>Copyright 2022 Bluemercury. All Rights Reserved</p>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                      <FaPinterestP/>
                      <FaFacebookF/>
                      <FaInstagram/>
-                     <a href="https://www.youtube.com/channel/UCrgUXfV7IIFllEQMbzd9J3A" target='_blank' rel='noreferrer'><FaYoutube/></a>
+                     <FaYoutube/>
                 </div>
         </div>
         <div className='accortn'>
