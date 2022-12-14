@@ -43,7 +43,7 @@ const navigate=useNavigate()
 const p1=`&_sort=ProductCard__Price&_order=${Orderby}`
 React.useEffect(()=>{
   setloading(true);
-axios.get(`https://blure-mercury.herokuapp.com/Products?_page=${Page}&_limit=12${Orderby && p1}` )
+axios.get(`https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${Orderby && p1}` )
 
 .then((res) =>{
     console.log(res);
