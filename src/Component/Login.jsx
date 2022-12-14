@@ -23,7 +23,7 @@ export const Login = () => {
     try {
      
       let usersData = await fetch(
-        `https://blure-mercury.herokuapp.com/Users?email=${userData.email}&password=${userData.password}`
+        `https://nice-plum-dhole-gown.cyclic.app/Users?email=${userData.email}&password=${userData.password}`
       );
       usersData = await usersData.json();
       
