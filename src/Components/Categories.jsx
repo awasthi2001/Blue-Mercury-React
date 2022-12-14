@@ -4,24 +4,24 @@ import { Divider } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import axios from 'axios'
 //https://blure-mercury.herokuapp.com/Product?MerchBadge=${cat}
-export const Categories = ({setData,setloading}) => {
+export const Categories = ({setData,setloading,p1,orderBy,Page,setTotalPages}) => {
 
   const changeFilter= async (cat)=>{
     
       setloading(true);
-      let res = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?MerchBadge=${cat}`)
+      let res = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge=${cat}`)
       let data = await res.json();
       setData(data);
+      setTotalPages(data.length/12);
       setloading(false);
 
    
       setloading(true);
-      let res2 = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?MerchBadge_2=${cat}`)
+      let res2 = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge_2=${cat}`)
       let data2 = await res2.json();
       setData([...data,...data2]);
+      setTotalPages(data.length+data2.length/12);
       setloading(false);
- 
-   
   }
   return (
     <Box>
@@ -64,7 +64,7 @@ export const Categories = ({setData,setloading}) => {
 
 
 
-    <Box m="5" ml="-2"fontWeight={400} fontSize='sm' >FILTERS BY SKIN CARE   </Box>
+    {/* <Box m="5" ml="-2"fontWeight={400} fontSize='sm' >FILTERS BY SKIN CARE   </Box> */}
 
     </Box>
   )
