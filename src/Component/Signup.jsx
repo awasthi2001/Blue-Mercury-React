@@ -15,7 +15,7 @@ export const Signup = () => {
 
     const handleSignup = async (e) => {
         e.preventDefault();
-        let usersRes = await fetch(`https://blure-mercury.herokuapp.com/Users?email=${userData.email}`);
+        let usersRes = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Users?email=${userData.email}`);
         let usersData = await usersRes.json();
         
         if (usersData.length > 0) {
@@ -25,7 +25,7 @@ export const Signup = () => {
             },4000)
             return;
         }
-        let res = await fetch("https://blure-mercury.herokuapp.com/Users", {
+        let res = await fetch("https://nice-plum-dhole-gown.cyclic.app/Users", {
             method: 'POST',
             body: JSON.stringify({ ...userData, userToken: userData.fName + Date.now() + userData.lName}),
             headers: { "Content-Type": "application/json" }
