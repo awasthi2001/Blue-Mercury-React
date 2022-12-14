@@ -14,7 +14,7 @@ export const SingleProducts = () => {
   const toast = useToast()
   const navigate = useNavigate()
   useEffect(() => {
-    axios.get(`https://blure-mercury.herokuapp.com/Products/${id}`).then((res) => {
+    axios.get(`https://nice-plum-dhole-gown.cyclic.app/Products/${id}`).then((res) => {
         console.log(res.data);
       setData(res.data);
 
@@ -25,7 +25,7 @@ export const SingleProducts = () => {
 if(!isAuth.loggedin){
  return navigate('/login')
 }else{
-  await fetch (`https://blure-mercury.herokuapp.com/Cart`,{
+  await fetch (`https://nice-plum-dhole-gown.cyclic.app/Cart`,{
     method:"POST",
     body: JSON.stringify(data),
     headers:{
