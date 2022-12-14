@@ -9,14 +9,14 @@ export const Categories = ({setData,setloading}) => {
   const changeFilter= async (cat)=>{
     
       setloading(true);
-      let res = await fetch(`https://blure-mercury.herokuapp.com/Products?MerchBadge=${cat}`)
+      let res = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?MerchBadge=${cat}`)
       let data = await res.json();
       setData(data);
       setloading(false);
 
    
       setloading(true);
-      let res2 = await fetch(`https://blure-mercury.herokuapp.com/Products?MerchBadge_2=${cat}`)
+      let res2 = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?MerchBadge_2=${cat}`)
       let data2 = await res2.json();
       setData([...data,...data2]);
       setloading(false);
