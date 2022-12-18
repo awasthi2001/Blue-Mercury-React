@@ -9,7 +9,7 @@ export const AuthContextProvider = ({children}) => {
       let token = localStorage.getItem('bluemercury-token');
       if(token){
         (async ()=> {
-            let res = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Users?userToken=${token}`);
+            let res = await fetch(`https://blue-mercury-3qiw.onrender.com/Users?userToken=${token}`);
             let data = await res.json();
             setIsAuth({...isAuth,data:data,loggedin:true});
         })()

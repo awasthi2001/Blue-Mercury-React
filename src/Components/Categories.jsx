@@ -9,7 +9,7 @@ export const Categories = ({setData,setloading,p1,orderBy,Page,setTotalPages}) =
   const changeFilter= async (cat)=>{
     
       setloading(true);
-      let res = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge=${cat}`)
+      let res = await fetch(`https://blue-mercury-3qiw.onrender.com/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge=${cat}`)
       let data = await res.json();
       setData(data);
       setTotalPages(data.length/12);
@@ -17,7 +17,7 @@ export const Categories = ({setData,setloading,p1,orderBy,Page,setTotalPages}) =
 
    
       setloading(true);
-      let res2 = await fetch(`https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge_2=${cat}`)
+      let res2 = await fetch(`https://blue-mercury-3qiw.onrender.com/Products?_page=${Page}&_limit=12${orderBy && p1}&MerchBadge_2=${cat}`)
       let data2 = await res2.json();
       setData([...data,...data2]);
       setTotalPages(data.length+data2.length/12);

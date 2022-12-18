@@ -23,7 +23,7 @@ export const Login = () => {
     try {
      
       let usersData = await fetch(
-        `https://nice-plum-dhole-gown.cyclic.app/Users?email=${userData.email}&password=${userData.password}`
+        `https://blue-mercury-3qiw.onrender.com/Users?email=${userData.email}&password=${userData.password}`
       );
       usersData = await usersData.json();
       

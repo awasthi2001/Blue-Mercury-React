@@ -74,7 +74,7 @@ export const Products = () => {
     setloading(true);
     axios
       .get(
-        `https://nice-plum-dhole-gown.cyclic.app/Products?_page=${Page}&_limit=12${
+        `https://blue-mercury-3qiw.onrender.com/Products?_page=${Page}&_limit=12${
           Orderby && p1
         }`
       )

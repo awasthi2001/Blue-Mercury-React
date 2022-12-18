@@ -14,7 +14,7 @@ export const SingleProducts = () => {
   const toast = useToast()
   const navigate = useNavigate()
   useEffect(() => {
-    axios.get(`https://nice-plum-dhole-gown.cyclic.app/Products/${id}`).then((res) => {
+    axios.get(`https://blue-mercury-3qiw.onrender.com/Products/${id}`).then((res) => {
         console.log(res.data);
       setData(res.data);
 
@@ -25,7 +25,7 @@ export const SingleProducts = () => {
 if(!isAuth.loggedin){
  return navigate('/login')
 }else{
-  await fetch (`https://nice-plum-dhole-gown.cyclic.app/Cart`,{
+  await fetch (`https://blue-mercury-3qiw.onrender.com/Cart`,{
     method:"POST",
     body: JSON.stringify(data),
     headers:{
